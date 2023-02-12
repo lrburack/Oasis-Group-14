@@ -20,17 +20,16 @@
 }
 
 
-.share-cal-button {
+.button {
   border-width: 2px;
   border-radius: 5px;
   background-color: white;
   border-color: cornflowerblue;
   color: cornflowerblue;
   transition-duration: 0.4s;
-
 }
 
-.share-cal-button:hover{
+.button:hover{
   background-color: cornflowerblue;
   color: white
 }

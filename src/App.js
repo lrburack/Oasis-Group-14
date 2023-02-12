@@ -8,8 +8,8 @@ export function App() {
   return (
     <div className="App">
       <div style={{display: "flex"}}>
-        <button style={{alignContent: "left"}}>
-          Go back!!
+        <button className="button" style={{alignContent: "left", margin: "10px"}}>
+          View my calendar
         </button>
       </div>
       
@@ -29,7 +29,7 @@ export function App() {
                   <p>Username</p>
                   <p>Email <span className="edit">edit</span></p>
                   <p>Phone <span className="edit">edit</span></p>
-                  <button className="share-cal-button">Share Calendar</button>
+                  <button className="button">Share Calendar</button>
               </div>
             </div>
           </div>
