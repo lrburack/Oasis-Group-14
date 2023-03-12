@@ -2,42 +2,51 @@
     height: 25px;
     margin-top: 10px;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    all: unset;
+}
+
+.entire-field:hover > img {
+    background: cornflowerblue;
 }
 
 .text-input-inactive {
-    height: 100%;
-    width: calc(100% - 50px);
-
-    border-radius: 5px;
-
-    transition-duration: 0.1s;
-    border-width: 0;
     border-color: none;
     background-color: #ebebeb
 }
 
 .text-input-active {
+    border-style: solid;
+    border-width: 0px 0px 5px 0px;
+    border-color: cornflowerblue;
+    background-color: #ebebeb;
+}
+
+.text-input{
+    transition-duration: 0.2s;
     height: 100%;
     width: calc(100% - 50px);
 
     border-radius: 5px;
+}
 
+.edit-button {
+    margin-left: 5px;
+    width: 15px;
+    height: 15px;
     transition-duration: 0.2s;
-    border-width: 0px 0px 5px 0px;
-    border-color: cornflowerblue;
-    background-color: #ebebeb;
 }
 
 .edit-button-inactive {
     margin-left: 5px;
     width: 15px;
     background: lightgray;
-    transition-duration: 0.2s;
 }
 
 .edit-button-active {
-    margin-left: 5px;
-    width: 15px;
     background: cornflowerblue;
-    transition-duration: 0.2s;
 }

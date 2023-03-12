@@ -1,14 +1,12 @@
 import edit_button from './edit-button.png'
 import { useState } from 'react'
 import './EditableField.css'
-import { useRef } from 'react'
 
-export default function EditableField({value, onclick_fxn})
+export default function EditableField({value, setValue})
 {
     const [editing, setEditing] = useState(false)
     const [hovering, setHovering] = useState(false)
     const [focused, setFocused] = useState(false)
-    const input_element = useRef(null)
 
     return (
         <div>
@@ -18,14 +16,15 @@ export default function EditableField({value, onclick_fxn})
             onMouseLeave={() => setHovering(false)}>
                 {
                     editing ?
-                        <input className={inputClassNames(editing, hovering, focused)}
-                            onFocus={setFocused(true)}
-                            onBlur={setFocused(false)}
-                            ref={input_element}
-                            type = 'text'/>
+                        <input className={inputClassNames(editing, hovering, focused) + " text-input"}
+                            onFocus={() => setFocused(true)}
+                            onBlur={() => setFocused(false)}
+                            type = 'text'
+                            value = {value}
+                            onChange = {(event) => setValue(event.target.value)}/>
                     : value
                 }
-                <img className={editButtonClassNames(editing, hovering)} src={edit_button}/>
+                <img className={editButtonClassNames(editing, hovering) + " edit-button"} src={edit_button}/>
             </div>
         </div>
     )
