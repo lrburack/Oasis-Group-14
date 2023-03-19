@@ -1,5 +1,6 @@
 import EditableField from "./EditableField"
 import { useEffect, useState } from 'react'
+import './App.css'
 
 export default function Profile({uid}) {
     // do some sort of get request to the database with the uid to retrieve information
@@ -47,7 +48,7 @@ export default function Profile({uid}) {
                             {/* Allow the user to save their changes */}
                             {
                                 propertiesHaveChanged ?
-                                <button onClick={() => {
+                                <button className="button" onClick={() => {
                                     console.log(`name: ${name}  email: ${email}  phone: ${phone}`)
                                     window.location.reload()
                                     }}> Save </button>
