@@ -25,3 +25,24 @@
   color: white
 }
 
+.date-text{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: cornflowerblue;
+  font-size: 30px;
+}
+
+.sidebar-container{
+  background-color: #d9f7ff;
+}
+
+.add-event-button{
+  background-color: #b4bfc2;
+  width: 20px;
+  height: 20px;
+  transition-duration: .4s;
+  vertical-align:bottom;
+}
+
+.add-event-button:hover{
+  background-color:cornflowerblue
+}
