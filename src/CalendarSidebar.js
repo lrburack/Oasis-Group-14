@@ -4,11 +4,11 @@ import './App.css'
 import EventEntry from './EventEntry'
 import plus from './plus.png'
 
-export default function Profile({events, date}) {
+export default function CalendarSidebar({events, date}) {
     return (
         <div className={'sidebar-container'} style={{border:'gray solid 1px', width:'200px', height:'500px'}}>
             <div>
-                {date}
+                {date.format('dddd, MMMM D, YYYY')}
             </div>
             
             <div style={{display:'flex', marginLeft:'50px'}}>
@@ -20,8 +20,9 @@ export default function Profile({events, date}) {
             </div>
 
             {
-                events.map(event => (
-                <EventEntry event_data={event}>
+                events && events.length > 0 && 
+                events.map((event, i) => (
+                <EventEntry key={i} event_data={event}>
 
                 </EventEntry>
                 ))

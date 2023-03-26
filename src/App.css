@@ -1,3 +1,5 @@
+
+
 .App {
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -33,6 +35,8 @@
 
 .sidebar-container{
   background-color: #d9f7ff;
+  border-radius: 5px;
+  margin-left: 80px
 }
 
 .add-event-button{
@@ -41,6 +45,16 @@
   height: 20px;
   transition-duration: .4s;
   vertical-align:bottom;
+}
+
+.ampm-text {
+  font-size: 7px;
+  margin-top: 5px;
+}
+
+.event-time{
+  font-size: 10px;
+  color: #909599;
 }
 
 .add-event-button:hover{
